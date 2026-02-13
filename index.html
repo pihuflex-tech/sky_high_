@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky High Aviator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background-color: #020617;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        @keyframes pulse-neon {
+            0%, 100% { box-shadow: 0 0 10px #10b981, 0 0 20px rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 25px #10b981, 0 0 45px rgba(16, 185, 129, 0.6); }
+        }
+        .pulse-emerald {
+            animation: pulse-neon 1.5s infinite ease-in-out;
+        }
+        @keyframes balance-pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); color: #10b981; }
+            100% { transform: scale(1); }
+        }
+        .animate-balance-pop {
+            animation: balance-pop 0.3s ease-out;
+        }
+        @keyframes shake {
+          0%, 100% { transform: translate(0, 0); }
+          25% { transform: translate(-1px, 1px); }
+          50% { transform: translate(1px, -1px); }
+          75% { transform: translate(-1px, -1px); }
+        }
+        .shake-subtle {
+          animation: shake 0.1s infinite;
+        }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin 3s linear infinite;
+        }
+        ::-webkit-scrollbar {
+          width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #334155;
+          border-radius: 10px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-950 text-white">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
